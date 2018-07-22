@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}</title>
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/gana-icon.jpg">
+    <meta name="apple-mobile-web-app-title" content="咖纳">
+    {% stylesheet application %}  
+  </head>
+  <body>
+    <div class="top-container">
+      <div class="container">
+        <div class="top-column-left">根植于顺德本土，致力于推动咖啡文化，打造咖啡品牌</div>
+        <div class="top-column-right">
+          <ul class="contact-line">
+            <li><i class="fa fa-qq"></i> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></li>
+            <li><i class="fa fa-phone"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <nav class="navbar navbar-default megamenu">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"><i class="fa fa-bars"></i></button>
+          <a class="navbar-brand logo" href="{{ site.url }}">
+            <img src="/images/assets/gana-logo.png" alt="咖纳Logo">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="{% if page.category == 'home' %}active{% endif %}"><a href="{{ site.url }}">首页</a></li>
+            <li class="{% if page.category == 'about' %}active{% endif %}"><a href="{{ site.url }}/about/">认识咖纳</a></li>
+            <li class="{% if page.category == 'espresso' %}active{% endif %}"><a href="{{ site.url }}/espresso/">意式咖啡豆</a></li>
+            <li class="{% if page.category == 'cubita' %}active{% endif %}"><a href="{{ site.url }}/cubita/">精品咖啡豆</a></li>
+            <li class="{% if page.category == 'drip-bag-coffee' %}active{% endif %}"><a href="{{ site.url }}/drip-bag-coffee/">挂耳咖啡</a></li>
+            <li class="{% if page.category == 'coffee-ware' %}active{% endif %}"><a href="{{ site.url }}/coffee-ware/">咖啡工具</a></li>
+            <li class="{% if page.category == 'news' %}active{% endif %}"><a href="{{ site.url }}/news/">新闻中心</a></li>
+            <li class="{% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/">联系我们</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {{ content }}
+    <div class="clearfix"></div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-xs-12 col-sm-3">
+              <h6 align="center"><a href="{{ site.url }}"><img class="img-responsive" src="/images/assets/gana-logo-foot.png" alt="咖纳Logo"></a></h6>
+              <p class="text-justify" style="text-indent:2em">咖纳贸易公司是一间根植于顺德本土，致力于推动咖啡文化，打造咖啡品牌的企业，致力于发展咖啡事业，提供最专业的、最优质的服务。</p>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-sm-offset-1">
+              <h5>联系我们</h5>
+              <ul class="list-icons">
+                <li><i class="fa fa-home"></i>{{ site.address }}</li>
+                <li><i class="fa fa-phone"></i><a href="tel:{{ site.tel }}" style="color:#974934">{{ site.tel }}</a></li>
+                <li><i class="fa fa-qq"></i><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes" style="color:#974934">{{ site.qq }}</a></li>
+                <li><i class="fa fa-envelope"></i>{{ site.email }}</li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-2">
+              <h5>产品中心</h5>
+              <ul class="list-icons">
+                <li><i class="fa fa-coffee"></i><a href="{{ site.url }}/espresso/" style="color:#974934">意式咖啡豆</a></li>
+                <li><i class="fa fa-coffee"></i><a href="{{ site.url }}/cubita/" style="color:#974934">精品咖啡豆</a></li>
+                <li><i class="fa fa-coffee"></i><a href="{{ site.url }}/drip-bag-coffee/" style="color:#974934">挂耳咖啡</a></li>
+                <li><i class="fa fa-coffee"></i><a href="{{ site.url }}/coffee-ware/" style="color:#974934">咖啡工具</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+              <h5>新闻中心</h5>
+              <ul class="list-icons">{% for post in site.categories["news"] limit:4 %}
+                <li><i class="fa fa-angle-double-right"></i><a href="{{ site.url }}/{{ post.image }}/" style="color:#974934">{{ post.title }}</a></li>{% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subfooter">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="footer-brand margin-bottom-10">
+                <p>Copyright © 2016-2018 佛山市顺德区咖纳贸易有限公司 | <a href="http://www.miitbeian.gov.cn/" target="_blank" style="color:#974934">粤ICP备16118060号-1</a> | <a href="{{ site.url }}/sitemap.xml" target="_blank" style="color:#974934">Sitemap</a> | 网站建设与维护：<a href="https://gdky.net" target="_blank" style="color:#974934">开源网络</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="toTop"><i class="fa fa-chevron-up"></i></a>
+    {% javascript application %}
+  </body>
+</html>

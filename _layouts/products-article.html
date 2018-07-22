@@ -1,0 +1,92 @@
+---
+layout: article
+---
+<div class="col-md-5">
+  <p align="center"><img class="img-responsive img-thumbnail" alt="{{ page.title }}" src="/images/{{ page.type-en }}/{{ page.image }}.jpg"></p>
+</div>
+<div class="col-md-7">
+  <h5>{{ page.title }}</h5>
+  {{ content }}
+  <p><a href="{{ page.shop }}" target="_blank" class="btn-e btn-e-primary"><i class="fa fa-shopping-cart"></i> 在线购买</a></p>
+</div>
+<div class="col-md-12 margin-top-30 margin-bottom-50">
+  <div class="tab-secondary">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#tab1" role="tab" data-toggle="tab">产品介绍</a></li>
+      <li role="presentation"><a href="#tab2" role="tab" data-toggle="tab">产品说明书</a></li>
+    </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="tab1">{% if page.video == 'wu' %}{% else %}
+        <div class="embed-responsive embed-responsive-16by9 margin-bottom-30">
+          <iframe class="embed-responsive-item" src="http://player.youku.com/embed/{{ page.video }}"></iframe>
+        </div>{% endif %}
+      </div>
+      <div role="tabpanel" class="tab-pane" id="tab2">
+      <div class="row">{% if page.manual == 'wu' %}{% endif %}{% if page.manual == 'one' %}
+        <div class="col-md-12"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-1.jpg"></div>{% endif %}{% if page.manual == 'two' %}
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-1.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-2.jpg"></div>{% endif %}{% if page.manual == 'six' %}
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-1.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-2.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-3.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-4.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-5.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-6.jpg"></div>{% endif %}{% if page.manual == 'seven' %}
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-1.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-2.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-3.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-4.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-5.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-6.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-7.jpg"></div>{% endif %}{% if page.manual == 'ten' %}
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-1.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-2.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-3.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-4.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-5.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-6.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-7.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-8.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-9.jpg"></div>
+        <div class="col-md-6"><img class="img-responsive center-block margin-bottom-30" alt="{{ page.keywords }}" src="/images/{{ page.type-en }}/{{ page.image }}-manual-10.jpg"></div>{% endif %}
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-8 col-md-offset-2">
+  <div class="section-heading">
+    <h3>更多{{ page.type }}</h3>
+    <i class="fa fa-{{ page.icon }}"></i>
+  </div>
+</div>
+<div class="col-md-12">
+  <div class="gallery">
+    <div class="row">{% if page.type-en == 'smart-clothing' %}{% for post in site.categories["smart-clothing"] %}
+      <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom-30">
+        <div class="img-wrapper">
+          <a href="{{ site.url }}{{ post.url }}"><img src="/images/{{ post.type-en }}/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
+        </div>
+        <div class="img-containt">
+          <p class="margin-left-10"><span style="font-size:13px">{{ post.enname }}</span><br><span style="font-size:15px">{{ post.title }}</span></p>
+        </div>
+      </div>{% endfor %}{% endif %}{% if page.type-en == 'wearable-devices' %}{% for post in site.categories["wearable-devices"] %}
+      <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom-30">
+        <div class="img-wrapper">
+          <a href="{{ site.url }}{{ post.url }}"><img src="/images/{{ post.type-en }}/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
+        </div>
+        <div class="img-containt">
+          <p class="margin-left-10"><span style="font-size:13px">{{ post.enname }}</span><br><span style="font-size:15px">{{ post.title }}</span></p>
+        </div>
+      </div>{% endfor %}{% endif %}{% if page.type-en == 'nano-steam' %}{% for post in site.categories["nano-steam"] %}
+      <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom-30">
+        <div class="img-wrapper">
+          <a href="{{ site.url }}{{ post.url }}"><img src="/images/{{ post.type-en }}/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
+        </div>
+        <div class="img-containt">
+          <p class="margin-left-10"><span style="font-size:13px">{{ post.enname }}</span><br><span style="font-size:15px">{{ post.title }}</span></p>
+        </div>
+      </div>{% endfor %}{% endif %}
+    </div>
+  </div>
+</div>

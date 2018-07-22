@@ -1,0 +1,126 @@
+---
+layout: default
+category: home
+full_title: 咖纳咖啡-意式拼配豆
+---
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active"><a href="{{ site.url }}"><img src="/images/home/billboard-1.jpg" alt=""></a></div>
+    <div class="item"><a href="{{ site.url }}"><img src="/images/home/billboard-2.jpg" alt=""></a></div>
+  </div>
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="contain-wrapp padding-bottom-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="section-heading">
+          <h3>产品中心</h3>
+          <i class="fa fa-thumbs-o-up"></i>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="gallery">
+          <div class="col-md-3 col-sm-6 col-xs-12 margin-bottom-30">
+            <div class="img-wrapper">
+              <a href="{{ site.url }}/espresso/"><img src="/images/products/espresso.jpg" class="img-responsive" alt="意式咖啡豆"></a>
+            </div>
+            <div class="img-containt text-center">
+              <p><span style="font-size:15px">意式咖啡豆</span></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 margin-bottom-30">
+            <div class="img-wrapper">
+              <a href="{{ site.url }}/cubita/"><img src="/images/products/cubita.jpg" class="img-responsive" alt="精品咖啡豆"></a>
+            </div>
+            <div class="img-containt text-center">
+              <p><span style="font-size:15px">精品咖啡豆</span></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 margin-bottom-30">
+            <div class="img-wrapper">
+              <a href="{{ site.url }}/drip-bag-coffee/"><img src="/images/products/drip-bag-coffee.jpg" class="img-responsive" alt="挂耳咖啡"></a>
+            </div>
+            <div class="img-containt text-center">
+              <p><span style="font-size:15px">挂耳咖啡</span></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 margin-bottom-30">
+            <div class="img-wrapper">
+              <a href="{{ site.url }}/coffee-ware/"><img src="/images/products/coffee-ware.jpg" class="img-responsive" alt="咖啡工具"></a>
+            </div>
+            <div class="img-containt text-center">
+              <p><span style="font-size:15px">咖啡工具</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contain-wrapp gray-container padding-bottom-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="section-heading">
+          <h3>认识咖纳</h3>
+          <i class="fa fa-home"></i>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="col-md-6">
+          <img class="img-responsive img-thumbnail margin-bottom-30" alt="认识咖纳" src="/images/home/about.jpg">
+        </div>
+        <div class="col-md-6">
+          <div class="text-justify" style="text-indent:2em">
+            <p>咖纳贸易公司是一间根植于顺德本土，致力于推动咖啡文化，打造咖啡品牌的企业。真正用心于打造咖啡文化到大众氛围，从大街小巷，家庭，花店，球馆，学校，企业文化中渗透，让大众慢慢对咖啡文化的认知程度加深，尝试到优质咖啡的魅力。咖纳公司携手联盟本地优质咖啡馆，为啡友提供优质的场所、以及平台；共同享受精品咖啡浪潮，与世界顶尖的咖啡水平同步。</p>
+            <p>我司本着诚信经营、专业服务、服务至上的宗旨，致力于发展咖啡事业，提供最专业的、最优质的服务。我们集合百家之所长，形成我们自己独有的经营理念和经营方式。</p>
+          </div>
+          <p><a href="{{ site.url }}/about/" class="btn-e btn-block btn-e-primary">了解很多</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 margin-top-60">
+      <div class="section-heading">
+        <h3>新闻中心</h3>
+        <i class="fa fa-newspaper-o"></i>
+      </div>
+    </div>
+    <div class="col-md-12 margin-bottom-30">
+      <div class="gallery">
+        <div class="row">{% for post in site.categories["news"] limit:3 %}
+          <div class="col-md-4 col-sm-6 col-xs-12 margin-bottom-30">
+            <article class="post post-thumbnail">
+              <div class="img-wrapper">
+                <a href="{{ site.url }}{{ post.url }}"><img src="/images/news/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
+              </div>
+              <div class="post-frame">
+                <div class="post-heading text-center">
+                  <h5><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h5>
+                  <p>{{ post.date | date:"%Y年%m月%d日" }}</p>
+                </div>
+                <p>{{ post.description }}</p>
+                <a href="{{ site.url }}{{ post.url }}" class="btn-e btn-block btn-e-primary">阅读全文</a>
+              </div>
+            </article>
+          </div>{% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

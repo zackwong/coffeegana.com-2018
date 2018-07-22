@@ -1,0 +1,29 @@
+url: http://www.coffeegana.com
+
+title: 咖纳咖啡
+
+keywords: 意式拼配豆
+
+description: 咖纳咖啡
+
+address: 广东省佛山市顺德区勒流光明中路
+
+tel: 0757-23660117
+
+qq: 3572576627
+
+email: 3572576627@qq.com
+
+exclude:
+  - README.md
+
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/js
+    - _assets/css
+  compress:
+    css: true
+    js: true
+  gzip: []
